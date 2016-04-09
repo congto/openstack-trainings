@@ -1,0 +1,591 @@
+
+
+    1) ______________ are created from templates as it regards to Heat.
+
+    Correct
+    Correct answer
+
+    Stacks
+    Explanation
+
+    Stacks are created from templates
+
+    2) What is the best definition of a 'stateful' service?
+
+    Correct
+    Correct answer
+
+    One where subsequent requests to the service depend on the results of the first request. They are more difficult to manage because a single action involves more than one request, simply providing additional instances and load balancing will not work.
+    Explanation
+
+    Stateless vs. Stateful services A stateless service is one that provides a response after your request, and then requires no further attention. To make a stateless service highly available, you need to provide redundant instances and load balance them. OpenStack services that are stateless include nova-api, nova-conductor, glance-api, keystone-api, neutron-api and nova-scheduler. A stateful service is one where subsequent requests to the service depend on the results of the first request. Stateful services are more difficult to manage because a single action typically involves more than one request, so simply providing additional instances and load balancing will not solve the problem. For example, if the Horizon user interface reset itself every time you went to a new page, it wouldn't be very useful. OpenStack services that are stateful include the OpenStack database and message queue. Making stateful services highly available can depend on whether you choose an active/passive or active/active configuration.
+
+    3) Each account and __________ is an individual SQLite database that is distributed across the cluster.
+
+    Correct
+    Correct answer
+
+    container
+    Explanation
+
+    Each account and container is an individual SQLite database that is distributed across the cluster.
+
+    4) You should at least use RAID5 on the backend storage when setting up a Swift environment.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    With Swift you can use commodity hardware. It is actually not recommended to use RAID at all on the backend storage.
+
+    5) Rings map logical names of data to locations on particular disks.
+
+    Correct
+    Correct answer
+
+    True
+
+    6) Parameters are user defined and can include _______________. They can also be passed into template from other ____________.
+
+    Correct
+    Correct answer
+
+    type, description, default value, hidden, and constraints, CLI or GUI
+
+    7) What do we need to add to an instance so that it is accessible/routable from the outside in?
+
+    Correct
+    Correct answer
+
+    floating ip
+    Explanation
+
+    While security group rule might be appropriate the most important thing we need for an instance to be accessible from the outside network in is providing a floating ip to the instance.
+
+    8) What are some of the compelling features of using the cloud?
+
+    Correct
+    Correct answer
+
+    On-demand self-service, Resource pooling, Rapid elasticity
+
+    9) What is NOT a default attribute in an OpenStack instance flavor?
+
+    Correct
+    Correct answer
+
+    The Operating System
+
+    10) What service is responsible for communication between all the top-level components within OpenStack?
+
+    Correct
+    Correct answer
+
+    The message queue
+
+    11) Which section in Horizon can we add a security group rule to an existing security group?
+
+
+    Correct answer
+
+    Compute
+    Explanation
+
+    To edit an existing security group we would rose to the Compute Section. Then select Access & Security, then Manage Rules on the existing security group.
+
+    12) A resource ID in a HOT template must be unique within the resources section.
+
+    Correct
+    Correct answer
+
+    True
+
+    13) OpenStack Networking is now called Quantum.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    The OpenStack Networking project is now called Neutron and was originally called Quantum before being renamed.
+
+    14) What is unstructured data?
+
+    Correct
+    Correct answer
+
+    commonly stored files like photos, videos, documents
+
+    15) Developers interact with the object storage system through a _____________ HTTP API.
+
+    Correct
+    Correct answer
+
+    RESTful
+    Explanation
+
+    Developers interact with the object storage system through a RESTful HTTP API.
+
+    16) In which configuration file can we edit the policy for cinder?
+
+    Correct
+    Correct answer
+
+    /etc/cinder/policy.json
+
+    17) It is best practice to access the underlying database directly for polling data from Ceilometer.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    API Service If the collected data from polling and notification agents are stored in supported database(s), it is possible that the schema of these database(s) may evolve over time. For this reason, we offer a REST API and recommend that you access the collected data via the API rather than by accessing the underlying database directly.
+
+    18) There are many types of cloud services. Some offer Software as a Service, Platform as a Service, Software defined networking, and Infrastructure as a Service. Which of these different types of "cloud" services defines OpenStack?
+
+    Correct
+    Correct answer
+
+    IaaS
+
+    19) Either the dashboard or the CLI gets the user credentials and authenticates with the Identity service via ____________.
+
+    Correct
+    Correct answer
+
+    REST API
+
+    20) The Image Service (Glance) in OpenStack provides:
+
+    Correct
+    Correct answer
+
+    Base Templates in which users can start new compute instances, Available images for users to choose from or create their own from existing servers, Ability to take store snapshots in the Image Service for backup
+
+    21) OpenStack is freely available under the Apache 2.0 license.
+
+    Correct
+    Correct answer
+
+    True
+    Explanation
+
+    OpenStack code is freely available via the Apache 2.0 license
+
+    22) Heat natively supports Heat DSL and AWS CFN.
+
+    Correct
+    Correct answer
+
+    True
+
+    23) Ceilometer is a template-driven engine that allows applications developers to describe and automate the deployment of infrastructure.
+
+    
+    Correct answer
+
+    False
+    Explanation
+
+    Heat is the OpenStack Orchestration template engine.
+
+    24) Block storage is:
+
+    Correct
+    Correct answer
+
+    Raw device storage such as SAN (storage area network)
+
+    25) We are logged in to Horizon as the cloud administrative user. We need to create a new project called LA. Which section would we be able to create this project in?
+
+    
+    Correct answer
+
+    Identity
+    Explanation
+
+    Under the Identity Section in Horizon and then in the Projects menu we can create a new project.
+
+    26) The Ceilometer projects created two methods to collect data:
+
+    Correct
+    Correct answer
+
+    bus Listener agent , polling agents
+    Explanation
+
+    Two methods to collect data: 1) Bus Listener agent - which takes events generated on the notification bus and transforms them into Ceilometer samples. This is the preferred method of data collection. If you are working on some OpenStack related project and are using the Oslo library, you are kindly invited to come and talk to one of the project members to learn how you could quickly add instrumentation for your project. 2) Polling agents, which is the less preferred method, will poll some API or other tool to collect information at a regular interval. Where the option exists to gather the same data by consuming notifications, then the polling approach is less preferred due to the load it can impose on the API services.
+
+    27) The most commonly used and supported hypervisor used for OpenStack is:
+
+    Correct
+    Correct answer
+
+    KVM
+
+    28) When creating an instance in the CLI, what would the added benefit be to add an SSH key to our instance at boot time? What is the actual 'benefit'?
+
+    Correct
+    Correct answer
+
+    Be able to access our VM without the need to provide a password via SSH
+    Explanation
+
+    The benefit of adding an SSH key to our instance at boot time is that we can then access our VM without the need to enter a password. Using VNC console access on our instance in OpenStack does not play a part with SSH keys. Adding encryption with an SSH pair is not the benefit here, it is the need for no password.
+
+    29) Which service models does cloud computing provide?
+
+    Correct
+    Correct answer
+
+    SaaS, PaaS, IaaS
+
+    30) We need to add to the default security group the option to allow SSH. The CIDR range that needs to be able to access the instances on this security group is on 172.16.10.0/24. Which is the proper command to add this rule?
+
+    Correct
+    Correct answer
+
+    nova secgroup-add-rule default tcp 22 22 172.16.10.0/24
+
+    31) If you divide a billing process into a 3 step process, as is commonly done in the telco industry, the steps would be:
+
+    Correct
+    Correct answer
+
+    Metering/Rating/Billing
+
+    32) The length constraint in HOT templates applies to parameters with only a lower limit or an upper limit. It defines a lower and upper limit for the numeric value of the parameter.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    The length constraint applies to parameters with only a lower limit or an upper limit. There at least has to be a min or max specified. The syntax of the length constraint: lenth: {min: , max: }
+
+    33) What command would help us get the documentation from the CLI on how to use the nova boot subcommand option?
+
+    Correct
+    Correct answer
+
+    nova help, nova help boot
+
+    34) With Swift we can choose _________ and Partition over Consistency.
+
+    Correct
+    Correct answer
+
+    Availability
+    Explanation
+
+    With Swift we can choose Availability and Partition over Consistency on the CAP theorem.
+
+    35) Ceilometer is for Metering only; you can not do billing and Rating out of the box.
+
+    Correct
+    Correct answer
+
+    True
+
+    36) OpenStack APIs are compatible with Amazon EC2 and Amazon S3.
+
+    Correct
+    Correct answer
+
+    True
+
+    37) When troubleshooting a nova compute issue on your OpenStack server, where might you locate the logs?
+
+    Correct
+    Correct answer
+
+    /var/log/nova
+
+    38) Ephemeral Storage is:
+
+    Correct
+    Correct answer
+
+    Local non-persistent storage for VM
+
+    39) Which of the following services would you use to store an instance image used to create Virtual Machines from?
+
+    Correct
+    Correct answer
+
+    Swift
+
+    40) The container database contains the list of _______ in that container.
+
+    Correct
+    Correct answer
+
+    objects
+
+    41) Which of the following options provides OpenStack a native REST API?
+
+    Correct
+    Correct answer
+
+    heat-api
+
+    42) An object stored in Swift is ________.
+
+    Correct
+    Correct answer
+
+    The data being stored itself in Swift
+    Explanation
+
+    Objects is the data itself being stored in swift.
+
+    43) We now need to connect to an already running instance with SSH from a Linux terminal. The name of our instance is instance_1. The key that we setup at boot time for this instance is key1. We are using the Cirros image for this machine. The current IP address showing for this instance is 10.10.2.5 How might we now connect to this instance without a password?
+
+    Correct
+    Correct answer
+
+    ssh -i key1 cirros@10.10.2.5
+
+    44) To eliminate the need of accessing the Nova database directly which services does nova use?
+
+    Correct
+    Correct answer
+
+    Nova Conductor
+
+    45) There can be multiple forms of actions to send ceilometer data, but two have been implement so far:
+
+    Correct
+    Correct answer
+
+    Log, HTTP callback
+    Explanation
+
+    There can be multiple forms of actions, but two have been implemented so far: HTTP callback You provide a URL to be called whenever the alarm has been set off The payload of the request contains all the details of why the alarm was triggered Log Mostly useful for debugging, stores alarms in a log file
+
+    46) When setting up an OpenStack environment, it is important to plan ahead and decide which hypervisor you want because you can only use one hypervisor at a time.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    OpenStack can support multiple hypervisors in a single installation.
+
+    47) For VM placement on a host, Nova uses both __________ and ___________.
+
+    Correct
+    Correct answer
+
+    filtering, weights
+    Explanation
+
+    For VM placement on host, Nova uses both filtering and weights.
+
+    48) Glance is the OpenStack name for Compute.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    Nova is the OpenStack name for compute
+
+    49) Which command would show us the different name spaces on our Linux OpenStack environment?
+
+    Correct
+    Correct answer
+
+    sudo ip netns list
+
+    50) Which of the following is a valid way to upload an object of an image called image2.jpg in to a swift container called container2?
+
+    Correct
+    Correct answer
+
+    swift upload --object-name image2.jpg container2 /home/user/stephen/image2.jpg, Log in to the OpenStack Dashboard then navigate to Project --> Containers --> Select Container2 and then Upload Object Button selecting your image2.jpg
+
+    51) Swift is highly available, distributed, eventually consistent block storage.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    Swift is highly available, distributed, eventually consistent object storage.
+
+    52) What architecture components work together with Ceilometer?
+
+    Correct
+    Correct answer
+
+    polling agent, notification agent, collector, alarming
+
+    53) What does the OpenStack project aim to deliver?
+
+    Correct
+    Correct answer
+
+    Massively scalable cloud solution, Simple to implement cloud solution, Feature rich cloud solution
+
+    54) It is possible to share a Network between Projects.
+
+    Correct
+    Correct answer
+
+    True
+    Explanation
+
+    Yes we can do this by editing the network as an admin. In the Edit network page we can select the network as a "shared" network.
+
+    55) What is the best definition of a 'stateless' service?
+
+    Correct
+    Correct answer
+
+    One that provides a response after your request, and then requires no further attention. To make the service highly available, you need to provide redundant instances and load balance them.
+    Explanation
+
+    Stateless vs. Stateful services A stateless service is one that provides a response after your request, and then requires no further attention. To make a stateless service highly available, you need to provide redundant instances and load balance them. OpenStack services that are stateless include nova-api, nova-conductor, glance-api, keystone-api, neutron-api and nova-scheduler. A stateful service is one where subsequent requests to the service depend on the results of the first request. Stateful services are more difficult to manage because a single action typically involves more than one request, so simply providing additional instances and load balancing will not solve the problem. For example, if the Horizon user interface reset itself every time you went to a new page, it wouldn't be very useful. OpenStack services that are stateful include the OpenStack database and message queue. Making stateful services highly available can depend on whether you choose an active/passive or active/active configuration.
+
+    56) We need to boot a new instance using the cirrus-0.3.2-x86_64-uec image. We want an m1.nano spec size for this Virtual Machine and need to be sure we have access using the key pair called stephen-key. The instance needs to be called instance_2. Which command would do all of this for us?
+
+    Correct
+    Correct answer
+
+    nova boot instance_2 --image cirrus-0.3.2-x86_64-uec --flavor m1.nano --key-name stephen-key
+
+    57) The message queue or RabbitMQ is a service that is stateless.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    A stateful service is one where subsequent requests to the service depend on the results of the first request. Stateful services are more difficult to manage because a single action typically involves more than one request, so simply providing additional instances and load balancing will not solve the problem. For example, if the Horizon user interface reset itself every time you went to a new page, it wouldn't be very useful. OpenStack services that are stateful include the OpenStack database and message queue. A stateless service is one that provides a response after your request, and then requires no further attention. To make a stateless service highly available, you need to provide redundant instances and load balance them. OpenStack services that are stateless include nova-api, nova-conductor, glance-api, keystone-api, neutron-api and nova-scheduler.
+
+    58) CAP theorem is distributed systems that can not guarantee all three fields of Consistency, Availability, and Partition tolerance.
+
+    Correct
+    Correct answer
+
+    True
+
+    59) What command might we use to see a list of our current VM instances?
+
+    Correct
+    Correct answer
+
+    nova list
+
+    60) Which of the following options would correctly create an SSH KEY pair, as well as add it the public portion of the key into OpenStack?
+
+    Correct
+    Correct answer
+
+    Step1) ssh-keygen -q -f new-key Step2) nova keypair-add key new-key --pub-key new-key.pub
+
+    61) What service can be combined with Heat to provide an Autoscaling service?
+
+    Correct
+    Correct answer
+
+    Ceilometer
+    Explanation
+
+    Heat provides an Autoscaling service that interacts with Ceilometer
+
+    62) Which of the following backend database engines will ceilometer support?
+
+    Correct
+    Correct answer
+
+    MongoDB, PostgreSQL, MySQL
+    Explanation
+
+    MongoDB, MySQL, PostgreSQL, HBase, DB2
+
+    63) An account database contains the list of ________ in that account.
+
+    Correct
+    Correct answer
+
+    containers
+    Explanation
+
+    An account database contains the list of containers in that account
+
+    64) The OpenStack Compute Service is known as:
+
+    Correct
+    Correct answer
+
+    nova
+
+    65) Which hypervisors can be supported in OpenStack?
+
+    Correct
+    Correct answer
+
+    XEN, VMWARE vSphere 4.1, update 1 or greater, KVM
+
+    66) Object storage is:
+
+    Correct
+    Correct answer
+
+    Access only whole object—not parts of object
+
+    67) The ___________ interacts with other components through the queue and central database repo.
+
+    Correct
+    Correct answer
+
+    nova-scheduler
+    Explanation
+
+    The nova-scheduler interacts with other components through the queue and central database repo.
+
+    68) OpenStack Swift is an Object Storage service.
+
+    Correct
+    Correct answer
+
+    True
+
+    69) It is not possible to load balance network traffic out of the box in OpenStack.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    Using the Neutron Load Balancer service we can create software load balancing between instances.
+
+    70) Ceilometer watches for key values that can then trigger reactions in the cloud to perform _________.
+
+    Correct
+    Correct answer
+
+    Alarming, Alerting
+
+    71) The Heat CloudWatch API does all of the orchestration work.
+
+    Correct
+    Correct answer
+
+    False
+    Explanation
+
+    The Heat engine does all of the orchestration work.
